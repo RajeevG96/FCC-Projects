@@ -16,7 +16,7 @@ html,body{
     padding: 10px;
     width: 100%;
     height: 50px;
-    background: blue;
+    background: #061d32;
 }
 .navbar-left{
     justify-content: flex-start;
@@ -24,7 +24,7 @@ html,body{
 .navbar-left__logo{
     display: inline;
     text-decoration: none;
-    color: black;
+    color: #ffffff;
 }
 .navbar-right{
     position: absolute;
@@ -48,11 +48,13 @@ html,body{
     bottom: 0;
     width: 100%;
     height: 50px;
-    background: slategrey;
+    background: #061d32;
 }
 
+/*********************************************************************************************/
+/**********************   NAVBAR for PHONE SCREENS   *****************************************/
+/*********************************************************************************************/
 
-/*NAVBAR for PHONE SCREENS*/
 @media screen
 and (max-width: 360px)
 and (-webkit-device-pixel-ratio: 2)
@@ -67,10 +69,13 @@ and (-webkit-device-pixel-ratio: 2)
         right: 10px;
         padding: 0;
         margin: 0;
+        color: white;
     }
 }
+/*********************************************************************************************/
+/*********************   CONTENT AREA for PHONE SCREENS  *************************************/
+/*********************************************************************************************/
 
-/*CONTENT AREA for PHONE SCREENS*/
 @media screen
     and (max-width: 360px)
     and (-webkit-device-pixel-ratio: 2)
@@ -79,73 +84,59 @@ and (-webkit-device-pixel-ratio: 2)
         margin-top: 25px;
         margin-bottom: 30px;
     }
-    .searchform{
+
+    /*==========================================================================*/
+    /*=========================    INDEX PAGE    ===============================*/
+    /*==========================================================================*/
+
+
+
+    /*=========================   INDEX PAGE HEADER  ===========================*/
+
+    .header{
+        padding-top: 5px;
         height: 150px;
         background-image: url("../pic/blog-wallpaper-copy.jpg");
         text-align: center;
         background-size:cover;
+        color: white;
     }
-    .searchform__input{
+
+    .header__input{
         width: 90%;
         height: 30%;
         margin: 10px auto;
         padding: 3px;
-        background: none;
-        border: solid crimson;
-        border-radius: 15px;
-        -moz-border-radius: 15px;
-        -webkit-border-radius: 15px;
+        background-color: rgba(24, 32, 35, 0.5);
+        border: none;
     }
+
+    /*========================  INDEX PAGE LATEST ARTICLE  =================*/
 
     .articleintro{
         text-align: center;
         width: 100%;
-        height: 220px;
-    }
-    .articleintro_autoheight{
-        width: 100%;
-        height: auto;
-        background-color: darkblue;
-    }
-    .articleintro_narrow{
-        font-size: 10px;
-        width: 70%;
-        margin: 15px auto;
     }
     .articleintro__header{
         position: relative;
         z-index: 5;
         height: 15%;
         margin: 0;
-        background: brown;
+        background: #1e282c;
+        color:white;
     }
     .articleintro__content{
         position: relative;
         width: 100%;
-        background: #2d3a3e;
+        background: #061d32;
         color:white;
-    }
-    .articleintro__content_flexbox{
-        display: inline-flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-    }
-    .articleintro__content_dark{
-        background: #1e1e1e;
-        height: auto;
+
     }
     .articleintro__authorimage{
         position: relative;
         top:0;
         left:0;
-        width: 100px;
-        height: 100px;
-        overflow: hidden;
-        border-radius: 50%;
-        background: snow url("../pic/author.jpg") no-repeat center;
-        background-size: cover;
-    }
-    .articleintro__authorimage_flexbox{
+        margin-left: 5px;
         width: 100px;
         height: 100px;
         overflow: hidden;
@@ -154,44 +145,44 @@ and (-webkit-device-pixel-ratio: 2)
         background-size: cover;
     }
     .articleintro__text{
-         position: absolute;
-         top:0;
-         right:0;
-         text-align: left;
-         padding: auto 5% auto 110px ;
-         margin-left: 110px;
-         margin-right: 5%;
-         font-size: 12px;
-     }
-    .articleintro__text_flexbox{
+        position: absolute;
+        top:0;
+        right:0;
         text-align: left;
-        width: 50%;
-        font-size: 12px;
-        color: white;
+        padding: auto 5% auto 110px ;
+        margin-left: 110px;
+        margin-right: 5%;
+        font-size: 10px;
+    }
+    .articleintro__footer{
+        width: 100%;
+        height: 15%;
+        background: #1e282c;
+        color:white;
+    }
+
+    /*========================  INDEX PAGE OLDER ARTICLEs  =================*/
+
+    .articleintro_narrow{
+        font-size: 10px;
+        width: 70%;
+        margin: 15px auto;
     }
     .articleintro__content_fullheight-border{
         padding: 15px;
         height: 100%;
-        border: solid grey 5px;
+        /*border: solid grey 5px;*/
         color: white;
+        background: #061d32;
     }
     .articleintro-image{
         height: auto;
         width: 80%;
     }
-    .articleintro__footer{
-        width: 100%;
-        height: 15%;
-        background: #a50600;
-    }
-    .title{
-        padding-top: 5px;
-        height: 150px;
-        background-image: url("../pic/blog-wallpaper-copy.jpg");
-        text-align: center;
-        background-size:cover;
-        color: white;
-    }
+
+    /*==========================================================================*/
+    /*=========================   ARTICLE PAGE   ===============================*/
+    /*==========================================================================*/
 
     .article{
         text-align: center;
@@ -206,7 +197,35 @@ and (-webkit-device-pixel-ratio: 2)
     }
     .article__content{
         text-align: left;
-        font-size: 12px;
+        font-size: 10px;
+        color: white;
+    }
+
+    /*===================   ARTICLE PAGE AUTHOR SECTION  ======================*/
+
+    .intro{
+        width: 100%;
+        height: auto;
+        background: #1e282c;
+    }
+    .intro__content_flexbox{
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .intro__authorimage_flexbox{
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        background: snow url("../pic/author.jpg") no-repeat center;
+        background-size: cover;
+        align-self: center;
+    }
+    .intro__text_flexbox{
+        text-align: left;
+        width: 50%;
+        font-size: 10px;
         color: white;
     }
 }
