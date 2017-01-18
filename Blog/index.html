@@ -9,17 +9,94 @@
 
     <!-- Normalize -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" rel="stylesheet">
-    <link href="/assets/css/syle.css" rel="stylesheet">
-    
-
-    
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/4702dce551.js"></script>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <nav class="navbar"> <!--block-->
+      <div class="navbar-left"> <!--nested block-->
+          <a class="navbar-left__logo" href="index.html">LOGO</a><!--nested block element-->
+      </div>
+      <ul class="navbar-right"><!--nested block-->
+        <li class="navbar-right__item">MenuItem 1</li><!--nested block element-->
+        <li class="navbar-right__item">MenuItem 2</li><!--nested block element-->
+        <li class="navbar-right__item">MenuItem 3</li><!--nested block element-->
+        <li class="navbar-right__item">MenuItem 4</li><!--nested block element-->
+      </ul>
+      <span class="navbar-right-icon"><!--block-->
+        <i class="fa fa-list fa-2x"></i>
+      </span>
+    </nav>
 
-    <!-- jQuery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <header class="header">
+      <input class="header__input" type="text" placeholder="Search article">
+    </header>
 
+
+
+      <section class="intro"><!--block-->
+          <header class="intro-header">
+              What is lorem ipsum ?
+          </header>
+        <article class="intro__content_flexbox">
+          <div class="intro__authorimage_flexbox"></div>
+          <div class="intro__text_flexbox">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and scrambled it to make a type
+              specimen book. It has survived not only five centuries, but also the leap into
+              electronic typesetting, ...</p>
+          </div>
+        </article>
+          <footer class="intro-footer">
+              Read more ...
+          </footer>
+      </section>
+
+
+    <section class="intro-container">
+        <section class="articleintro articleintro_narrow">
+          <article class="articleintro__content articleintro__content">
+            <img class="articleintro-image" src="./assets/pic/local-seo-keyword-research.jpg">
+            <h3>What is lorem ipsum ?</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's ...</p>
+            <a href="article.html">Read more ...</a>
+          </article>
+        </section>
+
+        <section class="articleintro articleintro_narrow">
+          <article class="articleintro__content articleintro__content">
+            <img class="articleintro-image" src="./assets/pic/local-seo-keyword-research.jpg">
+            <h3>What is lorem ipsum ?</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's ...</p>
+            <a href="article.html">Read more ...</a>
+          </article>
+        </section>
+
+        <section class="articleintro articleintro_narrow">
+          <article class="articleintro__content articleintro__content">
+            <img class="articleintro-image" src="./assets/pic/local-seo-keyword-research.jpg">
+            <h3>What is lorem ipsum ?</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's ...</p>
+            <a href="article.html">Read more ...</a>
+          </article>
+        </section>
+
+        <section class="articleintro articleintro_narrow">
+            <article class="articleintro__content articleintro__content">
+                <img class="articleintro-image" src="./assets/pic/local-seo-keyword-research.jpg">
+                <h3>What is lorem ipsum ?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's ...</p>
+                <a href="article.html">Read more ...</a>
+            </article>
+        </section>
+
+    </section>
+    <footer class="footer"></footer>
     
   </body>
 </html>
