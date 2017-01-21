@@ -1,182 +1,186 @@
 /*********************************************************************************************/
 /***************************   PHONE SCREENS   360px width  **********************************/
 /***********************************font-size: 10px*******************************************/
-    html, body {
-        margin-top: 25px;
-        margin-bottom: 30px;
-        background: #2d3a3e;
-    }
+html, body {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    background: #2d3a3e;
+}
 
-    * {
-        box-sizing: border-box;
-    }
-    /*==========================================================================*/
-    /*=========================      NAVBAR      ===============================*/
-    /*==========================================================================*/
+* {
+    box-sizing: border-box;
+}
+/*==========================================================================*/
+/*=========================      NAVBAR      ===============================*/
+/*==========================================================================*/
 
-    .navbar {
-        display: inline-flex;
-        position: fixed;
-        z-index: 10;
-        top: 0;
-        left: 0;
-        padding: 10px;
-        width: 100%;
-        height: 50px;
-        background: #061d32;
-    }
+.navbar {
+    display: inline-flex;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    background: #061d32;
 
-    .navbar-left {
-        justify-content: flex-start;
-    }
+}
 
-    .navbar-left__logo {
-        display: inline;
-        text-decoration: none;
-        color: #ffffff;
-    }
+.navbar-left {
+    justify-content: flex-start;
+}
 
-    .navbar-right {
-        display: none;
-    }
+.navbar-left__logo {
+    display: inline;
+    text-decoration: none;
+    color: #ffffff;
+}
 
-    .navbar-right-icon {
-        display: inline-block;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        padding: 0;
-        margin: 0;
-        color: white;
-    }
+.navbar-right {
+    display: none;
+}
 
-    /*==========================================================================*/
-    /*=========================    INDEX PAGE    ===============================*/
-    /*==========================================================================*/
+.navbar-right-icon {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
 
-    .header {
-        padding-top: 5px;
-        height: 150px;
-        background-image: url("../pic/blog-wallpaper-copy.jpg");
-        text-align: center;
-        background-size: cover;
-        color: white;
-    }
+/*==========================================================================*/
+/*=========================    INDEX PAGE    ===============================*/
+/*==========================================================================*/
 
-    .header__input {
-        width: 90%;
-        height: 30%;
-        margin: 10px auto;
-        padding: 3px;
-        background-color: rgba(24, 32, 35, 0.5);
-        border: none;
-    }
+.header {
+    padding-top: 5px;
+    height: 150px;
+    background-image: url("../pic/blog-wallpaper-copy.jpg");
+    text-align: center;
+    background-size: cover;
+    color: white;
+}
 
-    /*==============  LATEST ARTICLE & AUTHOR introduction layout ==============*/
+.header__input {
+    width: 90%;
+    height: 30%;
+    margin: 10px auto;
+    padding: 3px;
+    background-color: rgba(24, 32, 35, 0.5);
+    border: none;
+    font-size: 20px;
+    color:white;
+}
 
-    .intro {
-        width: 100%;
-        height: auto;
-        background: #1e282c;
-    }
-    .intro-header {
-        width: 100%;
-        height: auto;
-        background: #a50600;
-        text-align: center;
-    }
-    .intro__content_flexbox {
-        display: inline-flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-    }
+/*==============  LATEST ARTICLE & AUTHOR introduction layout ==============*/
 
-    .intro__authorimage_flexbox {
-        width: 100px;
-        height: 100px;
-        overflow: hidden;
-        border-radius: 50%;
-        background: snow url("../pic/author.jpg") no-repeat center;
-        background-size: cover;
-        align-self: center;
-    }
+.intro {
+    width: 100%;
+    height: auto;
+    background: #1e282c;
+}
+.intro-header {
+    width: 100%;
+    height: auto;
+    background: #2c3d41;
+    text-align: center;
+}
+.intro__content_flexbox {
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
 
-    .intro__text_flexbox {
-        text-align: left;
-        width: 50%;
-        font-size: 10px;
-        color: white;
-    }
-    .intro-footer {
-        width: 100%;
-        height: auto;
-        background: #a50600;
-        text-align: center;
-    }
+.intro__authorimage_flexbox {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: snow url("../pic/author.jpg") no-repeat center;
+    background-size: cover;
+    align-self: center;
+}
 
-    /*========================  INDEX PAGE OLDER ARTICLE's  =================*/
+.intro__text_flexbox {
+    text-align: left;
+    width: 50%;
+    font-size: 10px;
+    color: white;
+}
+.intro-footer {
+    width: 100%;
+    height: auto;
+    background: #2c3d41;
+    text-align: center;
+}
 
-    .articleintro {
-        text-align: center;
-        width: 100%;
-    }
+/*========================  INDEX PAGE OLDER ARTICLE's  =================*/
 
-    .articleintro__content {
-        padding: 15px;
-        position: relative;
-        width: 100%;
-        background: #061d32;
-        color: white;
-    }
+.articleintro {
+    text-align: center;
+    width: 100%;
+}
 
-    .articleintro_narrow {
-            font-size: 10px;
-            width: 70%;
-            margin: 15px auto;
-    }
+.articleintro__content {
+    padding: 15px;
+    position: relative;
+    width: 100%;
+    background: #061d32;
+    color: white;
+}
 
-    .articleintro__content_fullheight-border {
-        padding: 15px;
-        height: 100%;
-        color: white;
-        background: #061d32;
-    }
+.articleintro_narrow {
+    font-size: 10px;
+    width: 70%;
+    margin: 15px auto;
+}
 
-    .articleintro-image {
-        height: auto;
-        width: 80%;
-    }
+.articleintro__content_fullheight-border {
+    padding: 15px;
+    height: 100%;
+    color: white;
+    background: #061d32;
+}
 
-    /*==========================================================================*/
-    /*=========================   ARTICLE PAGE   ===============================*/
-    /*==========================================================================*/
-    .article {
-        text-align: center;
-        margin: 0 auto;
-        width: 70%;
-        height: auto;
-    }
+.articleintro-image {
+    height: auto;
+    width: 80%;
+}
 
-    .article-image {
-        padding-top: 25px;
-        height: auto;
-        width: 80%;
-    }
+/*==========================================================================*/
+/*=========================   ARTICLE PAGE   ===============================*/
+/*==========================================================================*/
+.article {
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+}
 
-    .article__content {
-        text-align: left;
-        font-size: 10px;
-        color: white;
-    }
+.article-image {
+    padding-top: 25px;
+    height: auto;
+    width: 80%;
+}
 
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 50px;
-        background: #061d32;
-    }
+.article__content {
+    text-align: left;
+    font-size: 10px;
+    color: white;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: #061d32;
+    z-index: 10;
+}
 
 /*********************************************************************************************/
 /************************     TABLET SCREENS   960px width     *******************************/
@@ -217,12 +221,12 @@ and (-webkit-device-pixel-ratio: 2)
 }
 /*********************************************************************************************/
 /***************************  960px width < DESKTOP SCREENS     ******************************/
-/***********************************font-size: 15px*******************************************/
+/***********************************font-size: 20px*******************************************/
 /*************************(-webkit-device-pixel-ratio: 1)*************************************/
 
 @media screen
 and (min-width: 961px)
- {
+{
     html, body {
         width: 100%;
         margin-bottom: 50px;
@@ -230,12 +234,15 @@ and (min-width: 961px)
     }
 
     .header {
+        position: relative;
         padding-top: 5px;
         height: 350px;
         background-image: url("../pic/blog-wallpaper-copy.jpg");
         text-align: center;
         background-size: cover;
         color: white;
+        z-index: 3;
+
     }
     .header__input {
         width: 90%;
@@ -244,6 +251,11 @@ and (min-width: 961px)
         padding: 3px;
         background-color: rgba(24, 32, 35, 0.5);
         border: none;
+        font-size: 50px;
+        color: #ffffff;
+    }
+    .header__input:focus{
+        outline: none;
     }
     /*==========================================================================*/
     /*=========================      NAVBAR      ===============================*/
@@ -276,14 +288,14 @@ and (min-width: 961px)
 
     .articleintro__content {
         padding: 15px;
-        position: relative;
         width: 100%;
         background: #061d32;
         color: white;
+        border: darkgray solid 5px;
     }
 
     .articleintro_narrow {
-        font-size: 15px;
+        font-size: 20px;
         width: 40%;
         margin: 15px auto;
     }
@@ -299,12 +311,75 @@ and (min-width: 961px)
     }
     /*==============  LATEST ARTICLE & AUTHOR introduction layout ==============*/
 
+    .intro {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background: #1e282c;
+    }
+    .intro-header {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 5%;
+        height: 100%;
+        background: #1e282c;
+        color: white;
+        text-align: center;
+        z-index: 5;
+    }
+    .intro-header__verticaltext{
+        font-size: 35px;
+        white-space: nowrap;
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        align-self: center;
+
+
+    }
+    .intro__content_flexbox {
+        padding: 0 5%;
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+    }
     .intro__authorimage_flexbox{
-        width: 180px;
-        height: 180px;
+        margin-left: -25px;
+        margin-top: -20px;
+        -webkit-align-self: flex-start;
+        align-self: flex-start;
+        width: 150px;
+        height: 150px;
+        z-index: 1;
     }
     .intro__text_flexbox{
-        font-size: 15px;
+        width: 85%;
+        margin-left: 25px;
+        font-size: 20px;
+    }
+    .intro-footer {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right:0;
+        width: 5%;
+        height: 100%;
+        background: #1e282c;
+        color: white;
+        text-align: center;
+
+    }
+    .intro-footer__verticaltext{
+        font-size: 35px;
+        white-space: nowrap;
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        align-self: center;
     }
 
     /*==========================================================================*/
@@ -312,7 +387,7 @@ and (min-width: 961px)
     /*==========================================================================*/
 
     .article__content{
-        font-size: 15px;
+        font-size: 20px;
     }
     .article-image {
         padding-top: 25px;
