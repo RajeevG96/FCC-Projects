@@ -24,7 +24,6 @@ html, body {
     width: 100%;
     height: 50px;
     background: #061d32;
-
 }
 
 .navbar-left {
@@ -69,10 +68,12 @@ html, body {
     height: 30%;
     margin: 10px auto;
     padding: 3px;
-    background-color: rgba(24, 32, 35, 0.5);
+}
+.header__input_style{
+    background-color: rgba(52, 73, 94, 0.5);
+    color: #ffffff;
     border: none;
     font-size: 20px;
-    color:white;
 }
 
 /*==============  LATEST ARTICLE & AUTHOR introduction layout ==============*/
@@ -80,13 +81,17 @@ html, body {
 .intro {
     width: 100%;
     height: auto;
-    background: #1e282c;
 }
-.intro-header {
+.intro_darkblue{
+    background-color: #2c3e50;
+}
+.intro__marginals {
     width: 100%;
     height: auto;
-    background: #2c3d41;
     text-align: center;
+}
+.intro__marginals_darkblue{
+    background:#2c3e50;
 }
 .intro__content_flexbox {
     display: inline-flex;
@@ -249,10 +254,13 @@ and (min-width: 961px)
         height: 20%;
         margin: 10px auto;
         padding: 3px;
-        background-color: rgba(24, 32, 35, 0.5);
+
+    }
+    .header__input_style{
+        background-color: rgba(52, 73, 94, 0.5);
+        color: #ffffff;
         border: none;
         font-size: 50px;
-        color: #ffffff;
     }
     .header__input:focus{
         outline: none;
@@ -289,9 +297,10 @@ and (min-width: 961px)
     .articleintro__content {
         padding: 15px;
         width: 100%;
-        background: #061d32;
+        background: rgba(30, 30, 30, 0.18);
+
         color: white;
-        border: darkgray solid 5px;
+
     }
 
     .articleintro_narrow {
@@ -315,31 +324,33 @@ and (min-width: 961px)
         position: relative;
         width: 100%;
         height: auto;
-        background: #1e282c;
     }
-    .intro-header {
+
+    .intro__marginals {
         display: flex;
         flex-flow: column;
         justify-content: center;
         position: absolute;
         top:0;
-        left: 0;
         width: 5%;
         height: 100%;
-        background: #1e282c;
         color: white;
         text-align: center;
         z-index: 5;
     }
-    .intro-header__verticaltext{
+
+    .intro__marginals_right{
+        right:0;
+    }
+
+    .intro__marginals__verticaltext{
         font-size: 35px;
         white-space: nowrap;
         -webkit-transform: rotate(-90deg);
         transform: rotate(-90deg);
         align-self: center;
-
-
     }
+
     .intro__content_flexbox {
         padding: 0 5%;
         display: inline-flex;
@@ -359,27 +370,6 @@ and (min-width: 961px)
         width: 85%;
         margin-left: 25px;
         font-size: 20px;
-    }
-    .intro-footer {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        right:0;
-        width: 5%;
-        height: 100%;
-        background: #1e282c;
-        color: white;
-        text-align: center;
-
-    }
-    .intro-footer__verticaltext{
-        font-size: 35px;
-        white-space: nowrap;
-        -webkit-transform: rotate(-90deg);
-        transform: rotate(-90deg);
-        align-self: center;
     }
 
     /*==========================================================================*/
