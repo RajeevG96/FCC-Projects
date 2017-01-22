@@ -34,6 +34,7 @@ html, body {
     display: inline;
     text-decoration: none;
     color: #ffffff;
+    font-size: 25px;
 }
 
 .navbar-right {
@@ -218,10 +219,19 @@ html, body {
 /*********************************font-size: 18px*********************************************/
 
 @media screen
-and (min-width: 360px)
+and (min-width: 361px)
 and (-webkit-device-pixel-ratio: 2)
 {
-
+    .header {
+        position: relative;
+        padding-top: 5px;
+        height: 250px;
+        background-image: url("../pic/blog-wallpaper-copy.jpg");
+        text-align: center;
+        background-size: cover;
+        color: white;
+        z-index: 3;
+    }
     /*========================  INDEX PAGE OLDER ARTICLE's  =================*/
 
     .articleintro_narrow{
@@ -297,7 +307,7 @@ and (min-width: 961px)
     .navbar-right {
         display: inline;
         position: absolute;
-        top: 10px;
+        top: 15px;
         right: 10px;
         padding: 0;
         margin: 0;
@@ -323,9 +333,7 @@ and (min-width: 961px)
         padding: 15px;
         width: 100%;
         background: rgba(30, 30, 30, 0.18);
-
         color: white;
-
     }
 
     .articleintro_narrow {
