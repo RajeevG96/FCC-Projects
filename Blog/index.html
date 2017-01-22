@@ -23,9 +23,15 @@
               <li class="navbar-right__item">MenuItem 3</li><!--nested block element-->
               <li class="navbar-right__item">MenuItem 4</li><!--nested block element-->
           </ul>
-          <span class="navbar-right-icon"><!--block-->
-                <i class="fa fa-list fa-2x"></i>
-              </span>
+          <span id="hamMenu" class="navbar-right-icon"><!--block-->
+                <i class="fa fa-list fa-2x" ></i>
+          </span>
+          <ul id="side-bar" class="sidebar"><!--nested block-->
+              <li id="closeBtn" class="sidebar__closebutton sidebar__closebutton_style">&times;</li><!--nested block element-->
+              <li class="sidebar__item">MenuItem 2</li><!--nested block element-->
+              <li class="sidebar__item">MenuItem 3</li><!--nested block element-->
+              <li class="sidebar__item">MenuItem 4</li><!--nested block element-->
+          </ul>
       </nav>
 
       <header class="header">
@@ -103,6 +109,28 @@
 
 
       <footer class="footer"></footer>
-    
+    <script>
+        //similar to jQuery's document.ready function
+        //code comes from site https://plainjs.com
+        // in case the document is already rendered
+        if (document.readyState!='loading') run();
+        // modern browsers
+        else if (document.addEventListener) document.addEventListener('DOMContentLoaded', run);
+        // IE <= 8
+        else document.attachEvent('onreadystatechange', function(){
+                if (document.readyState=='complete') run();
+            });
+
+        function run() {
+                document.getElementById('hamMenu').onclick=function () {
+                    document.getElementById('side-bar').style.width = '30%';
+                }
+            document.getElementById('closeBtn').onclick=function () {
+                document.getElementById('side-bar').style.width = '0';
+            }
+
+
+        }
+    </script>
   </body>
 </html>

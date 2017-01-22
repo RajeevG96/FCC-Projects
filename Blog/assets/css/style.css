@@ -49,7 +49,33 @@ html, body {
     margin: 0;
     color: white;
 }
-
+.sidebar{
+    position: fixed;
+    padding: 50px 0 0 0;
+    top: -25px;
+    right: 0;
+    width: 0;
+    height:100%;
+    background: rgba(32, 42, 47, 0.91);
+    list-style: none;
+    transition: 0.5s;
+    overflow-x: hidden;
+}
+.sidebar__item{
+    padding-top: 50px;
+    margin-left: 25px;
+    color: white;
+}
+.sidebar__closebutton{
+    position: absolute;
+    top:20px;
+    left:20px;
+    list-style: none;
+}
+.sidebar__closebutton_style{
+    color: white;
+    font-size: 45px;
+}
 /*==========================================================================*/
 /*=========================    INDEX PAGE    ===============================*/
 /*==========================================================================*/
@@ -195,6 +221,7 @@ html, body {
 and (min-width: 360px)
 and (-webkit-device-pixel-ratio: 2)
 {
+
     /*========================  INDEX PAGE OLDER ARTICLE's  =================*/
 
     .articleintro_narrow{
@@ -247,14 +274,12 @@ and (min-width: 961px)
         background-size: cover;
         color: white;
         z-index: 3;
-
     }
     .header__input {
         width: 90%;
         height: 20%;
         margin: 10px auto;
         padding: 3px;
-
     }
     .header__input_style{
         background-color: rgba(52, 73, 94, 0.5);
