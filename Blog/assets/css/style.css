@@ -4,7 +4,7 @@
 html, body {
     margin-top: 25px;
     margin-bottom: 30px;
-    background: #2d3a3e;
+    background: #ffffff;
 }
 
 * {
@@ -164,11 +164,12 @@ html, body {
     color: white;
 }
 
-.articleintro_narrow {
+.articleintro_narrow, .articleintro_wide {
     font-size: 10px;
     width: 70%;
     margin: 15px auto;
 }
+
 
 .articleintro__content_fullheight-border {
     padding: 15px;
@@ -201,7 +202,7 @@ html, body {
 .article__content {
     text-align: left;
     font-size: 10px;
-    color: white;
+    color: #141e22;
 }
 
 .footer {
@@ -272,7 +273,7 @@ and (min-width: 961px)
     html, body {
         width: 100%;
         margin-bottom: 50px;
-        background: #2d3a3e;
+        background: #ffffff;
     }
 
     .header {
@@ -325,28 +326,64 @@ and (min-width: 961px)
     /*========================  INDEX PAGE OLDER ARTICLE's  =================*/
 
     .articleintro {
+        position: relative;
         text-align: center;
         width: 100%;
     }
-
     .articleintro__content {
-        padding: 15px;
+        padding: 0;
         width: 100%;
-        background: rgba(30, 30, 30, 0.18);
         color: white;
     }
-
     .articleintro_narrow {
-        font-size: 20px;
+        opacity: 1;
+        font-size: 0;
         width: 40%;
-        margin: 15px auto;
+        margin: 0;
+        height: 350px;
+        overflow: hidden;
+
+    }
+    .articleintro_wide {
+        font-size: 0;
+        height: 350px;
+        overflow: hidden;
+        width: 60%;
+        margin: 0;
+    }
+    .articleintro-image {
+        min-height: 350px;
+        min-width: 100%;
+        background-color: #141e22;
+        opacity: 1;
+        transform:scaleY(1);
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+    }
+    .hover{
+        opacity: 0.5;
+        transform:scale(1.1);
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
     }
 
-    .articleintro-image {
-        height: auto;
-        width: 40%;
+
+    .articleintro__info{
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: absolute;
+        top:0;
+        font-size: 25px;
+        opacity: 0;
     }
+
     .intro-container{
+        padding: 10px;
         display: inline-flex;
         flex-flow: row wrap;
         justify-content: space-around;
