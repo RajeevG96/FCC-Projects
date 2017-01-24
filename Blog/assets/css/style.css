@@ -1,19 +1,17 @@
-/*********************************************************************************************/
-/***************************   PHONE SCREENS   360px width  **********************************/
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+/**********************************************************************************************/
+/***************************   PHONE SCREENS   360px width  *****************************/
 /***********************************font-size: 10px*******************************************/
 html, body {
     margin-top: 25px;
     margin-bottom: 30px;
     background: #ffffff;
 }
-
 * {
     box-sizing: border-box;
 }
-/*==========================================================================*/
-/*=========================      NAVBAR      ===============================*/
-/*==========================================================================*/
-
 .navbar {
     display: inline-flex;
     position: fixed;
@@ -25,22 +23,21 @@ html, body {
     height: 50px;
     background: #061d32;
 }
-
 .navbar-left {
     justify-content: flex-start;
 }
-
 .navbar-left__logo {
     display: inline;
     text-decoration: none;
-    color: #ffffff;
-    font-size: 25px;
-}
+    height: 95%;
+    width: auto;
 
+}
 .navbar-right {
     display: none;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
 }
-
 .navbar-right-icon {
     display: inline-block;
     position: absolute;
@@ -76,20 +73,16 @@ html, body {
 .sidebar__closebutton_style{
     color: white;
     font-size: 45px;
+    font-family: 'Nunito', sans-serif;
 }
-/*==========================================================================*/
-/*=========================    INDEX PAGE    ===============================*/
-/*==========================================================================*/
-
 .header {
     padding-top: 5px;
     height: 150px;
-    background-image: url("../pic/blog-wallpaper-copy.jpg");
+    background-image: url("http://advicetoday.in/wp-content/uploads/2016/12/information-technology-wallpaper-15.jpg");
     text-align: center;
     background-size: cover;
     color: white;
 }
-
 .header__input {
     width: 90%;
     height: 30%;
@@ -101,13 +94,18 @@ html, body {
     color: #ffffff;
     border: none;
     font-size: 20px;
+    font-family: 'Nunito', sans-serif;
 }
-
-/*==============  LATEST ARTICLE & AUTHOR introduction layout ==============*/
-
+.intro-container{
+    padding: 0;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
 .intro {
     width: 100%;
     height: auto;
+    overflow: hidden;
 }
 .intro_darkblue{
     background-color: #2c3e50;
@@ -121,11 +119,26 @@ html, body {
     background:#2c3e50;
 }
 .intro__content_flexbox {
+    position: relative;
     display: inline-flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
-
+.intro__cover{
+    position: absolute;
+    top:0;
+    left:0;
+    max-height: 100%;
+    min-width:100%;
+    background-color: white;
+    z-index:4;
+    opacity: 1;
+    transition: 1s;
+}
+.cover-hover{
+    opacity: 0;
+    transition: 1s;
+}
 .intro__authorimage_flexbox {
     width: 100px;
     height: 100px;
@@ -135,12 +148,12 @@ html, body {
     background-size: cover;
     align-self: center;
 }
-
 .intro__text_flexbox {
     text-align: left;
     width: 50%;
     font-size: 10px;
     color: white;
+    font-family: 'Nunito', sans-serif;
 }
 .intro-footer {
     width: 100%;
@@ -148,63 +161,101 @@ html, body {
     background: #2c3d41;
     text-align: center;
 }
-
-/*========================  INDEX PAGE OLDER ARTICLE's  =================*/
-
 .articleintro {
+    position: relative;
     text-align: center;
     width: 100%;
 }
-
 .articleintro__content {
-    padding: 15px;
-    position: relative;
+    padding: 0;
     width: 100%;
-    background: #061d32;
     color: white;
+    background-color: #141e22;
 }
-
-.articleintro_narrow, .articleintro_wide {
-    font-size: 10px;
-    width: 70%;
-    margin: 15px auto;
+.articleintro_narrow {
+    opacity: 1;
+    font-size: 0;
+    width: 40%;
+    margin: 0;
+    height: 150px;
+    overflow: hidden;
+    font-family: 'Nunito', sans-serif;
 }
-
-
-.articleintro__content_fullheight-border {
-    padding: 15px;
-    height: 100%;
-    color: white;
-    background: #061d32;
+.articleintro_wide {
+    font-size: 0;
+    height: 150px;
+    overflow: hidden;
+    width: 60%;
+    margin: 0;
 }
-
+/*important to set max-height for phones*/
 .articleintro-image {
-    height: auto;
-    width: 80%;
+    max-height: 150px;
+    min-width: 100%;
+    opacity: 1;
+    transform:scaleY(1);
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
 }
-
-/*==========================================================================*/
-/*=========================   ARTICLE PAGE   ===============================*/
-/*==========================================================================*/
+.imagehover {
+    opacity: 0.5;
+    transform:scale(1.1);
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.infohover {
+    animation-name: infoOpcaityIn;
+    animation-duration: 1s;
+}
+@keyframes infoOpcaityIn {
+    0% {opacity: 0; }
+    100% {opacity: 1}
+}
+.articleintro__info {
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top:0;
+    font-size: 10px;
+    font-family: 'Nunito', sans-serif;
+}
+.readmore {
+    text-decoration: none;
+    color: #ffffff;
+    background: rgba(0,0,0,0.3);
+}
 .article {
     text-align: center;
     margin: 0 auto;
     width: 70%;
     height: auto;
 }
-
+.article-title{
+    display: block;
+    font-size: 40px;
+    font-family: 'Nunito', sans-serif;
+}
+.topicname{
+    font-size: 55px;
+    font-family: 'Nunito', sans-serif;
+}
 .article-image {
     padding-top: 25px;
     height: auto;
     width: 80%;
 }
-
 .article__content {
     text-align: left;
     font-size: 10px;
     color: #141e22;
+    font-family: 'Nunito', sans-serif;
 }
-
 .footer {
     position: fixed;
     left: 0;
@@ -216,56 +267,57 @@ html, body {
 }
 
 /*********************************************************************************************/
-/************************     TABLET SCREENS   960px width     *******************************/
+/************************     TABLET SCREENS   480px width     *******************************/
 /*********************************font-size: 18px*********************************************/
 
 @media screen
-and (min-width: 361px)
-and (-webkit-device-pixel-ratio: 2)
+and (min-width:480px)
 {
     .header {
         position: relative;
-        padding-top: 5px;
         height: 250px;
-        background-image: url("../pic/blog-wallpaper-copy.jpg");
-        text-align: center;
-        background-size: cover;
-        color: white;
         z-index: 3;
     }
-    /*========================  INDEX PAGE OLDER ARTICLE's  =================*/
-
-    .articleintro_narrow{
-        font-size: 18px;
+    .header__input {
+        height: 20%;
     }
-
-    /*==============  LATEST ARTICLE & AUTHOR introduction layout ==============*/
-
+    .header__input_style{
+        font-size: 35px;
+    }
+    .articleintro_narrow {
+        height: 250px;
+    }
+    .articleintro_wide {
+        height: 250px;
+    }
+    .intro__cover{
+        height: auto;
+        min-width:100%;
+    }
     .intro__authorimage_flexbox {
         width: 140px;
         height: 140px;
     }
-
-    /*==========================================================================*/
-    /*=========================   ARTICLE PAGE   ===============================*/
-    /*==========================================================================*/
-
-    .article__content{
-        font-size: 18px;
+    .intro__text_flexbox {
+        font-size: 14px;
     }
-
-    .intro__authorimage_flexbox{
-        width: 140px;
-        height: 140px;
+    .articleintro-image {
+        max-height: 250px;
+        min-width: 100%;
     }
-    .intro__text_flexbox{
-        font-size: 18px;
+    .articleintro__info {
+        font-size: 14px;
+    }
+    .article__content {
+        font-size: 14px;
     }
 }
-/*********************************************************************************************/
-/***************************  960px width < DESKTOP SCREENS     ******************************/
-/***********************************font-size: 20px*******************************************/
-/*************************(-webkit-device-pixel-ratio: 1)*************************************/
+
+
+/********************************************************************************************/
+/***************************  960px width < DESKTOP SCREENS     **********************/
+/***********************************font-size: 20px****************************************/
+
 
 @media screen
 and (min-width: 961px)
@@ -275,36 +327,15 @@ and (min-width: 961px)
         margin-bottom: 50px;
         background: #ffffff;
     }
-
     .header {
-        position: relative;
-        padding-top: 5px;
         height: 350px;
-        background-image: url("../pic/blog-wallpaper-copy.jpg");
-        text-align: center;
-        background-size: cover;
-        color: white;
-        z-index: 3;
-    }
-    .header__input {
-        width: 90%;
-        height: 20%;
-        margin: 10px auto;
-        padding: 3px;
     }
     .header__input_style{
-        background-color: rgba(52, 73, 94, 0.5);
-        color: #ffffff;
-        border: none;
         font-size: 50px;
     }
     .header__input:focus{
         outline: none;
     }
-    /*==========================================================================*/
-    /*=========================      NAVBAR      ===============================*/
-    /*==========================================================================*/
-
     .navbar-right {
         display: inline;
         position: absolute;
@@ -315,87 +346,38 @@ and (min-width: 961px)
         list-style: none;
         color: white;
     }
-
     .navbar-right__item {
         display: inline;
-
+        overflow: hidden;
+    }
+    .navbar-right__tile{
+        height: 100%;
+        text-decoration: none;
+    }
+    .navbar-right__tile:hover{
+        padding:5px 0;
+        background-color: #06324a;
+        text-decoration: none;
     }
     .navbar-right-icon {
         display: none;
     }
-    /*========================  INDEX PAGE OLDER ARTICLE's  =================*/
-
-    .articleintro {
-        position: relative;
-        text-align: center;
-        width: 100%;
-    }
-    .articleintro__content {
-        padding: 0;
-        width: 100%;
-        color: white;
-    }
     .articleintro_narrow {
-        opacity: 1;
-        font-size: 0;
-        width: 40%;
-        margin: 0;
         height: 350px;
-        overflow: hidden;
-
     }
     .articleintro_wide {
-        font-size: 0;
         height: 350px;
-        overflow: hidden;
-        width: 60%;
-        margin: 0;
     }
     .articleintro-image {
+        max-height: 1000px;
         min-height: 350px;
-        min-width: 100%;
-        background-color: #141e22;
-        opacity: 1;
-        transform:scaleY(1);
-        -webkit-transition: 0.5s;
-        -moz-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s;
     }
-    .hover{
-        opacity: 0.5;
-        transform:scale(1.1);
-        -webkit-transition: 0.5s;
-        -moz-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s;
+    .articleintro__info {
+        font-size: 20px;
     }
-
-
-    .articleintro__info{
-        width: 100%;
-        height: 100%;
-        display: none;
-        position: absolute;
-        top:0;
-        font-size: 25px;
-        opacity: 0;
-    }
-
-    .intro-container{
-        padding: 10px;
-        display: inline-flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-    }
-    /*==============  LATEST ARTICLE & AUTHOR introduction layout ==============*/
-
     .intro {
         position: relative;
-        width: 100%;
-        height: auto;
     }
-
     .intro__marginals {
         display: flex;
         flex-flow: column;
@@ -405,29 +387,28 @@ and (min-width: 961px)
         width: 5%;
         height: 100%;
         color: white;
-        text-align: center;
         z-index: 5;
     }
-
     .intro__marginals_right{
         right:0;
     }
-
     .intro__marginals__verticaltext{
         font-size: 35px;
         white-space: nowrap;
         -webkit-transform: rotate(-90deg);
         transform: rotate(-90deg);
         align-self: center;
+        font-family: 'Nunito', sans-serif;
     }
-
     .intro__content_flexbox {
         padding: 0 5%;
-        display: inline-flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
+        justify-content: space-around;
     }
-    .intro__authorimage_flexbox{
+    .intro__cover{
+        height: 100%;
+        width:100%;
+    }
+    .intro__authorimage_flexbox {
         margin-left: -25px;
         margin-top: -20px;
         -webkit-align-self: flex-start;
@@ -436,23 +417,13 @@ and (min-width: 961px)
         height: 150px;
         z-index: 1;
     }
-    .intro__text_flexbox{
+    .intro__text_flexbox {
         width: 85%;
         margin-left: 25px;
         font-size: 20px;
     }
-
-    /*==========================================================================*/
-    /*=========================   ARTICLE PAGE   ===============================*/
-    /*==========================================================================*/
-
-    .article__content{
+    .article__content {
         font-size: 20px;
-    }
-    .article-image {
-        padding-top: 25px;
-        height: auto;
-        width: 80%;
     }
 
 }

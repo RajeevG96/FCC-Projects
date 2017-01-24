@@ -15,13 +15,13 @@
   <body>
       <nav class="navbar"> <!--block-->
           <div class="navbar-left"> <!--nested block-->
-              <a class="navbar-left__logo" href="index.html">Team1</a><!--nested block element-->
+              <a href="index.html"><img  class="navbar-left__logo" src="./assets/pic/logo.png"></a><!--nested block element-->
           </div>
           <ul class="navbar-right"><!--nested block-->
-              <li class="navbar-right__item">MenuItem 1</li><!--nested block element-->
-              <li class="navbar-right__item">MenuItem 2</li><!--nested block element-->
-              <li class="navbar-right__item">MenuItem 3</li><!--nested block element-->
-              <li class="navbar-right__item">MenuItem 4</li><!--nested block element-->
+              <li class="navbar-right__item"><a class="navbar-right__tile" href="#">MenuItem 1</a></li><!--nested block element-->
+              <li class="navbar-right__item"><a class="navbar-right__tile" href="#">MenuItem 2</a></li><!--nested block element-->
+              <li class="navbar-right__item"><a class="navbar-right__tile" href="#">MenuItem 3</a></li><!--nested block element-->
+              <li class="navbar-right__item"><a class="navbar-right__tile" href="#">MenuItem 4</a></li><!--nested block element-->
           </ul>
           <span id="hamMenu" class="navbar-right-icon"><!--block-->
                 <i class="fa fa-list fa-2x" ></i>
@@ -35,14 +35,17 @@
       </nav>
 
       <header class="header">
-          <input class="header__input header__input_style" type="text" placeholder="Search article">
+          <input class="header__input header__input_style" type="text" placeholder="SEARCH">
       </header>
 
       <section class="intro intro_darkblue"><!--block-->
+
           <header class="intro__marginals intro__marginals_darkblue">
               <div class="intro__marginals__verticaltext">Latest article</div>
           </header>
+
           <article class="intro__content_flexbox">
+              <img id="cover" class="intro__cover" src="https://static.pexels.com/photos/1380/black-and-white-city-skyline-buildings.jpg">
               <div class="intro__authorimage_flexbox"></div>
               <div class="intro__text_flexbox">
                   <h3>What is lorem ipsum ?</h3>
@@ -56,6 +59,7 @@
                       when an unknown printer took a galley of type and scrambled it to make a type
                       specimen book. It has survived not only five centuries, but also the leap into
                       electronic typesetting, ...</p>
+
               </div>
           </article>
           <footer class="intro__marginals intro__marginals_right intro__marginals_darkblue">
@@ -72,7 +76,7 @@
                       <h3>What is lorem ipsum ?</h3>
                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                       Lorem Ipsum has been the industry's ...</p>
-                      <a href="article.html">Read more ...</a>
+                      <a class="readmore" href="article.html">Read more ...</a>
                   </div>
               </article>
           </section>
@@ -84,7 +88,7 @@
                       <h3>What is lorem ipsum ?</h3>
                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                           Lorem Ipsum has been the industry's ...</p>
-                      <a href="article.html">Read more ...</a>
+                      <a class="readmore" href="article.html">Read more ...</a>
                   </div>
               </article>
           </section>
@@ -96,7 +100,7 @@
                       <h3>What is lorem ipsum ?</h3>
                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                           Lorem Ipsum has been the industry's ...</p>
-                      <a href="article.html">Read more ...</a>
+                      <a class="readmore" href="article.html">Read more ...</a>
                   </div>
               </article>
           </section>
@@ -108,7 +112,7 @@
                       <h3>What is lorem ipsum ?</h3>
                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                           Lorem Ipsum has been the industry's ...</p>
-                      <a href="article.html">Read more ...</a>
+                      <a class="readmore" href="article.html">Read more ...</a>
                   </div>
               </article>
           </section>
@@ -120,7 +124,7 @@
                       <h3>What is lorem ipsum ?</h3>
                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                           Lorem Ipsum has been the industry's ...</p>
-                      <a href="article.html">Read more ...</a>
+                      <a class="readmore" href="article.html">Read more ...</a>
                   </div>
               </article>
           </section>
@@ -132,7 +136,7 @@
                       <h3>What is lorem ipsum ?</h3>
                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                           Lorem Ipsum has been the industry's ...</p>
-                      <a href="article.html">Read more ...</a>
+                      <a class="readmore" href="article.html">Read more ...</a>
                   </div>
               </article>
           </section>
@@ -144,7 +148,7 @@
                       <h3>What is lorem ipsum ?</h3>
                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                           Lorem Ipsum has been the industry's ...</p>
-                      <a href="article.html">Read more ...</a>
+                      <a class="readmore" href="article.html">Read more ...</a>
                   </div>
               </article>
           </section>
@@ -156,7 +160,7 @@
                       <h3>What is lorem ipsum ?</h3>
                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                           Lorem Ipsum has been the industry's ...</p>
-                      <a href="article.html">Read more ...</a>
+                      <a class="readmore" href="article.html">Read more ...</a>
                   </div>
               </article>
           </section>
@@ -185,24 +189,37 @@
                   document.getElementById('side-bar').style.width = '0';
               };
 
-              //info text- hover effect
+              //tiles
               var tiles = document.getElementsByClassName('articleintro-image');
                 var infos = document.getElementsByClassName('articleintro__info');
               for (var i = 0; i < tiles.length; i++){
                   //hover in
                   tiles[i].onmouseover = function () {
-                      addClass(this,'hover');
-                      this.nextElementSibling.style.opacity = 1;
+                      if (!hasClass(this,'imagehover'))  addClass(this,'imagehover') ;
+                      if (!hasClass(this.nextElementSibling,'infohover')) addClass(this.nextElementSibling,'infohover');
                       this.nextElementSibling.style.display = 'block';
+                      this.nextElementSibling.style.opacity = 1;
                   };
                   //hover out
                   infos[i].onmouseleave = function () {
-                      var el = this.previousElementSibling;
-                      removeClass(el,'hover');
-                      this.style.opacity = 0;
+                      if (hasClass(this.previousElementSibling,'imagehover')) removeClass(this.previousElementSibling,'imagehover');
+                      if (hasClass(this,'infohover')) removeClass(this,'infohover');
                       this.style.display = 'none';
+                      this.style.opacity = 0;
                   };
               }
+
+              //latest article cover
+              var cover = document.getElementById('cover');
+              cover.onmouseover=function () {
+                  if (!hasClass(cover,'cover-hover')) addClass(cover,'cover-hover');
+              };
+              cover.onmouseleave=function () {
+                  if (hasClass(cover,'cover-hover')) removeClass(cover,'cover-hover');
+              };
+
+
+
               //add-remove-check for classes
               function hasClass(el, className) {
                   //>IE9 dosen't support classList because we check for className property
